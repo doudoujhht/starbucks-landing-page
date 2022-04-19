@@ -1,0 +1,33 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+    background: #2e343e;
+
+}
+
+section{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.hor{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    width: calc(100vh/3);
+    height: calc(100vh/3);
+    border: 3px solid black;
+    color: white;
+    font-size: 1.5em;
+    position: relative;
+}
+.hor::before{
+    position: absolute;
+    width: calc(100vh/3);
+    height: calc(100vh/3);
+    border: 3px solid black;
+
+}

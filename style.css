@@ -1,0 +1,75 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #10131c;
+}
+
+.navigation {
+  position: relative;
+  width: 140px;
+  height: 140px;
+  border-radius: 20px;
+  background: #212532;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: 0.5s;
+  transition-delay: 0.8s;
+}
+
+.navigation.active {
+  width: 400px;
+  height: 400px;
+}
+
+.navigation span {
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  background: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  transform: translate(calc(24px * var(--x)), calc(24px * var(--y)));
+  transition: 0.5s;
+  transition-delay: calc(0.1s * var(--i));
+}
+
+.navigation.active span {
+  width: 90px;
+  height: 90px;
+  background: #333849;
+  transform: translate(calc(120px * var(--x)), calc(120px * var(--y)));
+}
+
+.navigation span ion-icon {
+  transition: 0.5s;
+  transition-delay: calc(0.1s * var(--i));
+  font-size: 0em;
+}
+
+.navigation.active span ion-icon {
+  font-size: 2.7em;
+  color: white;
+  transition: 0.5s;
+}
+
+.navigation.active span:hover ion-icon {
+  color: #2dfc52;
+  filter: drop-shadow(0 0 4px #2dfc52) drop-shadow(0 0 10px #2dfc52) drop-shadow(0 0 30px #2dfc52);
+}
+
+a, a:hover, a :visited {
+  color: white;
+  text-decoration: none;
+}/*# sourceMappingURL=style.css.map */
