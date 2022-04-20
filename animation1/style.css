@@ -250,4 +250,42 @@ input:checked + .slider:before {
   border-radius: 50%;
 }
 
+.return {
+  background: black;
+  width: 7vw;
+  height: 7vh;
+  position: absolute;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  left: 0;
+}
+.return ion-icon {
+  color: white;
+  transition: 0.5s;
+  -webkit-animation: animate 0.5s infinite linear;
+          animation: animate 0.5s infinite linear;
+}
+.return ion-icon:hover {
+  color: #2196F3;
+}
+@-webkit-keyframes animate {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.2);
+  }
+}
+@keyframes animate {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.2);
+  }
+}
+
 /*# sourceMappingURL=style.css.map *//*# sourceMappingURL=style.css.map */
