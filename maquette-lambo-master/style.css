@@ -1,0 +1,140 @@
+
+@font-face {
+    font-family:'karla' ;
+    src: url("Karla-VariableFont_wght.ttf");
+}
+
+*{
+    padding: 0;
+    margin: 0.5%;
+    font-family: 'karla';
+}
+html{
+    background: url(image.png) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+body{
+
+    background-repeat:no-repeat;
+}
+
+#nav-bar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+
+    background-color: white;
+    padding: 0.5% 0% 0.5% 0%;
+
+}
+
+#nav-gauche, #nav-droite{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: black;
+    font-weight: 700;
+    font-family: 'karla';
+}
+#nav-droite{
+    padding-left:2% ;
+    justify-content: flex-end;
+}
+#nav-gauche{
+    padding-left: 2%;
+}
+ul{
+    width: 50%;
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+}
+#liste-droite{
+    width: 60%;
+}
+li{
+    display: flex;
+}
+
+#find{
+    width: 25%;
+}
+
+#account{
+    width: 22%;
+}
+
+#section-1{
+    display: flex;
+    flex-direction: row;
+}
+
+#gauche, #droite{
+
+    color: white;
+
+}
+
+#droite{
+    width: 35%;
+}
+
+#gauche{
+    width: 65%;
+}
+
+#sous-titre{
+    font-weight: 100; 
+}
+
+#aventador{
+    font-size: 3.5em;
+}
+a:hover, a:visited{
+    color: black;
+    text-decoration: none;
+}
+#button{
+    background-color: white;
+    text-decoration: none;
+    padding: 1.5% 3% 1.5% 3%;
+    font-weight: bold;
+}
+.titre{
+    font-size: 2.5em;
+    text-align: center;
+}
+.sub-title{
+    font-size: 1em;
+    text-align: center;
+    font-weight: 200;
+}
+
+#active{
+    padding-bottom: 5%;
+    border-bottom: solid #F4C25B 2px;
+}
+#button:hover{
+    background-color: transparent;
+    border: solid 3px white;
+    color: white;
+}
+
+#fleche-gauche, #fleche-droite{
+    border: solid white;
+    border-width: 0 4px 4px 0;
+    display: inline-block;
+    padding: 10px;
+}
+#fleche-gauche{
+    transform: rotate(135deg);
+}
+
+#fleche-droite{
+    transform: rotate(315deg);
+}
