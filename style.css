@@ -62,9 +62,12 @@ body {
   font-size: 2.7em;
   color: white;
   transition: 0.5s;
+  transition-delay: calc(0.1s * var(--i));
 }
 
 .navigation.active span:hover ion-icon {
+  transition: 0s;
+  transition-delay: 0s;
   color: #2dfc52;
   filter: drop-shadow(0 0 4px #2dfc52) drop-shadow(0 0 10px #2dfc52) drop-shadow(0 0 30px #2dfc52);
 }
