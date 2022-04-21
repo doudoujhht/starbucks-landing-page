@@ -117,7 +117,7 @@ ion-icon:hover{
 }
 .transition-container.slide .transition1{
     position: fixed;
-    background-color: #00efff;
+    background-color: rgb(random(255), random(255), random(255));;
     animation: slide 0.3s ease-in-out forwards;
     width: 100vw;
     height: 100vh;
@@ -126,7 +126,7 @@ ion-icon:hover{
 }
 .transition-container.slide .transition2{
     position: fixed;
-    background-color: orange;
+    background-color: rgb(random(255), random(255), random(255));;
     animation: slide 0.3s ease-in-out forwards;
     animation-delay: 0.3s;
     width: 100vw;
@@ -136,7 +136,7 @@ ion-icon:hover{
 }
 .transition-container.slide .transition3{
     position: fixed;
-    background-color: green;
+    background-color: rgb(random(255), random(255), random(255));;
     animation: slide 0.3s ease-in-out forwards;
     animation-delay: 0.6s;
     width: 100vw;

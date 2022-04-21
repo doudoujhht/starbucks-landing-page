@@ -233,7 +233,7 @@ section {
 
 .transition-container.slide .transition1 {
   position: fixed;
-  background-color: #00efff;
+  background-color: rgb(78, 186, 244);
   -webkit-animation: slide 0.3s ease-in-out forwards;
           animation: slide 0.3s ease-in-out forwards;
   width: 100vw;
@@ -244,7 +244,7 @@ section {
 
 .transition-container.slide .transition2 {
   position: fixed;
-  background-color: orange;
+  background-color: rgb(148, 216, 156);
   -webkit-animation: slide 0.3s ease-in-out forwards;
           animation: slide 0.3s ease-in-out forwards;
   -webkit-animation-delay: 0.3s;
@@ -257,7 +257,7 @@ section {
 
 .transition-container.slide .transition3 {
   position: fixed;
-  background-color: green;
+  background-color: rgb(78, 65, 183);
   -webkit-animation: slide 0.3s ease-in-out forwards;
           animation: slide 0.3s ease-in-out forwards;
   -webkit-animation-delay: 0.6s;
