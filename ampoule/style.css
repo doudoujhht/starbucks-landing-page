@@ -82,7 +82,7 @@ label input:checked ~ .bulb {
 
 .transition-container.slide .transition1 {
   position: fixed;
-  background-color: rgb(37, 207, 112);
+  background-color: rgb(99, 228, 24);
   -webkit-animation: slide 0.3s ease-in-out forwards;
           animation: slide 0.3s ease-in-out forwards;
   width: 100vw;
@@ -93,7 +93,7 @@ label input:checked ~ .bulb {
 
 .transition-container.slide .transition2 {
   position: fixed;
-  background-color: rgb(63, 230, 60);
+  background-color: rgb(114, 27, 15);
   -webkit-animation: slide 0.3s ease-in-out forwards;
           animation: slide 0.3s ease-in-out forwards;
   -webkit-animation-delay: 0.3s;
@@ -106,7 +106,7 @@ label input:checked ~ .bulb {
 
 .transition-container.slide .transition3 {
   position: fixed;
-  background-color: rgb(238, 193, 134);
+  background-color: rgb(42, 112, 38);
   -webkit-animation: slide 0.3s ease-in-out forwards;
           animation: slide 0.3s ease-in-out forwards;
   -webkit-animation-delay: 0.6s;

@@ -170,7 +170,7 @@ ul li:nth-child(3):hover::after {
 
 .transition-container.slide .transition1 {
   position: fixed;
-  background-color: rgb(117, 158, 55);
+  background-color: rgb(153, 15, 119);
   -webkit-animation: slide 0.3s ease-in-out forwards;
           animation: slide 0.3s ease-in-out forwards;
   width: 100vw;
@@ -181,7 +181,7 @@ ul li:nth-child(3):hover::after {
 
 .transition-container.slide .transition2 {
   position: fixed;
-  background-color: rgb(192, 216, 157);
+  background-color: rgb(113, 212, 90);
   -webkit-animation: slide 0.3s ease-in-out forwards;
           animation: slide 0.3s ease-in-out forwards;
   -webkit-animation-delay: 0.3s;
@@ -194,7 +194,7 @@ ul li:nth-child(3):hover::after {
 
 .transition-container.slide .transition3 {
   position: fixed;
-  background-color: rgb(45, 128, 112);
+  background-color: rgb(138, 49, 148);
   -webkit-animation: slide 0.3s ease-in-out forwards;
           animation: slide 0.3s ease-in-out forwards;
   -webkit-animation-delay: 0.6s;

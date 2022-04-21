@@ -22,22 +22,38 @@ body{
     align-items: center;
     cursor: pointer;
     transition: 1.6s;
-    transition-delay: 0.8s;
+    transition-delay: 0.25s;
 }
-$cal:(calc(-10.5px * 80/14));
-.navigation.active{
-    width: calc(800px);
-    height: calc(800px);
+
+.container-main{
+
+    position: relative;
+    left: -10px;
+    top: 10px;
     transition: 0.5s;
+}
+.active .container-main{
+    left: 0;
+    top: 0;
+    transform: translateX(-60px) translateY(60px) ;
+    transition: 1.6s;
+
+}
+
+.navigation.active{
+    width: calc(600px);
+    height: calc(600px);
+    transition: 0.25s;
+    transition-delay: 400ms;
 }
 
 .container-main{
     width: 100%;
     height: 100%;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
-    transform: translateY(-10.5px) translateX(-10.5px);
+
 }
 
 .navigation span{
@@ -51,34 +67,43 @@ $cal:(calc(-10.5px * 80/14));
     border-radius: 50%;
     transform: translate(calc(24px * var(--x)), calc(24px * var(--y)) );
     transition: 0.5s;
-    transition-delay: calc(0.1s * var(--i));
+    transition-delay: calc(50ms * var(--i));
 }
 .navigation.active span{
     width: 90px;
     height: 90px;
     background: #333849;
-    transform: translate(calc(120px * var(--x) - 60px), calc(120px * var(--y) - 60px));
+    transform: translate(calc(120px * var(--x)), calc(120px * var(--y)));
 
 }
 .navigation span ion-icon{
-    transition: 1s;
-    transition-delay: calc(0.1s * var(--i));
+    transition: 0.25s;
+    transition-delay: calc(250ms * var(--i));
+    transition-delay: 0s;
     font-size: 0em;
 }
 .navigation.active span ion-icon{
-    font-size: 2.7em;
+
+
     color: white;
-    transition: 1s;
-    transition-delay: calc(0.1s * var(--i));
+    transition: 0s;
+    font-size: 2.7em;
+    animation: ani 1.5s linear;
 }
 .navigation.active span:hover ion-icon{
-
-    transition: 0s;
-    transition-delay: 0s;
     color: #2dfc52;
+    transition: 0s;
     filter: drop-shadow(0 0 4px #2dfc52)
     drop-shadow(0 0 10px #2dfc52)
     drop-shadow(0 0 30px #2dfc52);
+}
+@keyframes ani {
+    0%{
+        font-size: 0em;
+    }
+    100%{
+        font-size: 2.7em;
+    }
 }
 a, a:hover, a :visited{
     color: white;

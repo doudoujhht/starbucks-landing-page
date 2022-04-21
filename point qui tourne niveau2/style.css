@@ -124,7 +124,7 @@ ion-icon:hover {
 
 .transition-container.slide .transition1 {
   position: fixed;
-  background-color: rgb(240, 97, 200);
+  background-color: rgb(134, 141, 242);
   -webkit-animation: slide 0.3s ease-in-out forwards;
           animation: slide 0.3s ease-in-out forwards;
   width: 100vw;
@@ -135,7 +135,7 @@ ion-icon:hover {
 
 .transition-container.slide .transition2 {
   position: fixed;
-  background-color: rgb(57, 124, 72);
+  background-color: rgb(53, 112, 98);
   -webkit-animation: slide 0.3s ease-in-out forwards;
           animation: slide 0.3s ease-in-out forwards;
   -webkit-animation-delay: 0.3s;
@@ -148,7 +148,7 @@ ion-icon:hover {
 
 .transition-container.slide .transition3 {
   position: fixed;
-  background-color: rgb(52, 31, 178);
+  background-color: rgb(90, 233, 241);
   -webkit-animation: slide 0.3s ease-in-out forwards;
           animation: slide 0.3s ease-in-out forwards;
   -webkit-animation-delay: 0.6s;

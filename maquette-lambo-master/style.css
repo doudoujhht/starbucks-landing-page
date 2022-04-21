@@ -188,7 +188,7 @@ a:hover, a:visited{
     animation: slide 0.3s ease-in-out forwards;
     animation-delay: 0.3s;
     width: 100vw;
-    height: 100vh;
+    height: 102vh;
     top: 0;
     right: -100vw;
 }

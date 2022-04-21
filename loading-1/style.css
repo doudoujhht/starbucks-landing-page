@@ -56,10 +56,10 @@ section .loader ::before {
   background: #00ff0a;
   border-radius: 50%;
   box-shadow: 0 0 10px #00ff0a, 0 0 20px #00ff0a, 0 0 40px #00ff0a, 0 0 60px #00ff0a, 0 0 80px #00ff0a, 0 0 100px #00ff0a;
-  -webkit-animation: animate 2s linear infinite;
-          animation: animate 2s linear infinite;
-  -webkit-animation-delay: calc(0.1s * var(--i));
-          animation-delay: calc(0.1s * var(--i));
+  -webkit-animation: animate 1s linear infinite;
+          animation: animate 1s linear infinite;
+  -webkit-animation-delay: calc(0.05s * var(--i));
+          animation-delay: calc(0.05s * var(--i));
 }
 
 @-webkit-keyframes animate {
