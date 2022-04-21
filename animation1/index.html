@@ -9,6 +9,13 @@
     
 </head>
 <body>
+    
+    <div class="transition-container">
+        <div class="transition1 transition" style="--i:0"></div>
+        <div class="transition2 transition " style="--i:1"></div>
+        <div class="transition3 transition" style="--i:2"></div>
+    </div>
+    
         <a href="../index.html" class="link return">
             <ion-icon name="arrow-back-outline"></ion-icon>
         </a>
@@ -69,6 +76,19 @@
         
     </div>
 
+    <script>
+        const link=document.querySelector("a.link")
+        const transition = document.querySelector(".transition-container") ;
+        link.addEventListener("click", (e) =>{
+            e.preventDefault();
+            transition.classList.add("slide")
+            setTimeout(()=> {
+                window.location = link.href;
+            },900)
+        })
+    
+    
+    </script>
     <script src="index.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>

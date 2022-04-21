@@ -8,6 +8,15 @@
     <title>Document</title>
 </head>
 <body>
+    <div class="transition-container">
+        <div class="transition1 transition" style="--i:0"></div>
+        <div class="transition2 transition " style="--i:1"></div>
+        <div class="transition3 transition" style="--i:2"></div>
+    </div>
+    <a href="../index.html" class="link return">
+        <ion-icon name="arrow-back-outline"></ion-icon>
+    </a>
+
     <nav id="nav-bar">
 
         <div id="nav-gauche">
@@ -50,7 +59,8 @@
     <section id="section-1">
         <div id="gauche">
             <p id="sous-titre">DARE YOUR EGO</p>
-            <p id="aventador">Aventatdor SVJ</p><br><br>
+            <p id="aventador">Aventador</p>
+            <br><br>
 
             <a href="" id="button">CRAFT YOUR ADVENTADOR</a>
         </div>
@@ -72,5 +82,18 @@
     <div id="fleche-gauche"></div>
     <div id="fleche-droite"></div>
 </body>
+<script>
+    const link=document.querySelector("a.link")
+    const transition = document.querySelector(".transition-container") ;
+    link.addEventListener("click", (e) =>{
+        e.preventDefault();
+        transition.classList.add("slide")
+        setTimeout(()=> {
+            window.location = link.href;
+        },900)
+    })
+</script>
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 <script src="index.js"></script>
 </html>

@@ -1,5 +1,5 @@
-$XdelayFactor : 2;
-$YdelayFactor: 3;
+$XdelayFactor : 0.2;
+$YdelayFactor: 0.2;
 
 $dotSize: 12px;
 $gridSize: 24px;
@@ -49,6 +49,81 @@ body {
     }
     &:nth-child(n + #{20 * $i + 1}):nth-child(-n + #{20 * ($i + 1)}) {
       --delay2: #{$i * $YdelayFactor * -1s};
+    }
+  }
+}
+
+.transition-container{
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  right: -100vw;
+  z-index: 1000;
+}
+.transition-container.slide .transition1{
+  position: fixed;
+  background-color: #00efff;
+  animation: slide 0.3s ease-in-out forwards;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  right: -100vw;
+}
+.transition-container.slide .transition2{
+  position: fixed;
+  background-color: orange;
+  animation: slide 0.3s ease-in-out forwards;
+  animation-delay: 0.3s;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  right: -100vw;
+}
+.transition-container.slide .transition3{
+  position: fixed;
+  background-color: green;
+  animation: slide 0.3s ease-in-out forwards;
+  animation-delay: 0.6s;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  right: -100vw;
+}
+@keyframes slide {
+  0%{
+      right: -100vw;
+  }
+  100%{
+      right: 0vw;
+  }
+}
+
+.return{
+  width: 7vw;
+  height: 7vh;
+  position: absolute;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 3%;
+  left: 0;
+  font-size: 4em;
+  ion-icon{
+    color: white;
+    transition: 0.5s;
+    animation: animate 0.5s infinite linear;
+  }
+  ion-icon:hover{
+    color: orange;
+  }
+  @keyframes animate {
+    0%{
+      transform: scale(1);
+    }
+    100%{
+      transform: scale(1.2);
     }
   }
 }

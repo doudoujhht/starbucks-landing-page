@@ -8,6 +8,7 @@
     padding: 0;
     margin: 0.5%;
     font-family: 'karla';
+
 }
 html{
     background: url(image.png) no-repeat center center fixed; 
@@ -15,11 +16,12 @@ html{
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-}
+    transition:3s;}
 body{
-
     background-repeat:no-repeat;
+
 }
+
 
 #nav-bar{
     display: flex;
@@ -77,6 +79,7 @@ li{
 #gauche, #droite{
 
     color: white;
+    transition:2s;
 
 }
 
@@ -90,10 +93,12 @@ li{
 
 #sous-titre{
     font-weight: 100; 
+    transition:2s;
 }
 
 #aventador{
     font-size: 3.5em;
+    transition:2s;
 }
 a:hover, a:visited{
     color: black;
@@ -104,15 +109,18 @@ a:hover, a:visited{
     text-decoration: none;
     padding: 1.5% 3% 1.5% 3%;
     font-weight: bold;
+    transition: 200ms;
 }
 .titre{
     font-size: 2.5em;
     text-align: center;
+    transition:2s;
 }
 .sub-title{
     font-size: 1em;
     text-align: center;
     font-weight: 200;
+    transition:2s;
 }
 
 #active{
@@ -137,4 +145,98 @@ a:hover, a:visited{
 
 #fleche-droite{
     transform: rotate(315deg);
+}
+
+@keyframes anim-lineUp {
+    0% {
+      opacity: 0;
+      transform: translateY(80%);
+    }
+    20% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+      transform: translateY(0%);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0%);
+    }
+  }
+
+  .transition-container{
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    right: -100vw;
+    z-index: 1000;
+}
+.transition-container.slide .transition1{
+    position: fixed;
+    background-color: #00efff;
+    animation: slide 0.3s ease-in-out forwards;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    right: -100vw;
+}
+.transition-container.slide .transition2{
+    position: fixed;
+    background-color: orange;
+    animation: slide 0.3s ease-in-out forwards;
+    animation-delay: 0.3s;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    right: -100vw;
+}
+.transition-container.slide .transition3{
+    position: fixed;
+    background-color: green;
+    animation: slide 0.3s ease-in-out forwards;
+    animation-delay: 0.6s;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    right: -100vw;
+}
+@keyframes slide {
+    0%{
+        right: -100vw;
+    }
+    100%{
+        right: 0vw;
+    }
+}
+
+.return{
+    width: 7vw;
+    height: 7vh;
+    position: absolute;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 17%;
+    left: 0;
+    font-size: 4em;
+}
+
+ion-icon{
+    color: white;
+    transition: 0.5s;
+    animation: animate 0.5s infinite linear;
+}
+ion-icon:hover{
+    color: orange;
+}
+@keyframes animate {
+    0%{
+        transform: scale(1);
+    }
+    100%{
+        transform: scale(1.2);
+    }
 }

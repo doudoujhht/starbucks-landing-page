@@ -22,13 +22,23 @@ body {
   justify-content: center;
   align-items: center;
   cursor: pointer;
-  transition: 0.5s;
+  transition: 1.6s;
   transition-delay: 0.8s;
 }
 
 .navigation.active {
-  width: 400px;
-  height: 400px;
+  width: 800px;
+  height: 800px;
+  transition: 0.5s;
+}
+
+.container-main {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  transform: translateY(-10.5px) translateX(-10.5px);
 }
 
 .navigation span {
@@ -49,11 +59,11 @@ body {
   width: 90px;
   height: 90px;
   background: #333849;
-  transform: translate(calc(120px * var(--x)), calc(120px * var(--y)));
+  transform: translate(calc(120px * var(--x) - 60px), calc(120px * var(--y) - 60px));
 }
 
 .navigation span ion-icon {
-  transition: 0.5s;
+  transition: 1s;
   transition-delay: calc(0.1s * var(--i));
   font-size: 0em;
 }
@@ -61,7 +71,7 @@ body {
 .navigation.active span ion-icon {
   font-size: 2.7em;
   color: white;
-  transition: 0.5s;
+  transition: 1s;
   transition-delay: calc(0.1s * var(--i));
 }
 

@@ -9,6 +9,10 @@
   --backgroundColor:#000;
 }
 
+html {
+  overflow: hidden;
+}
+
 body {
   background-color: var(--backgroundColor);
   min-height: 100vh;
@@ -288,4 +292,67 @@ input:checked + .slider:before {
   }
 }
 
+.transition-container {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  right: -100vw;
+  z-index: 1000;
+}
+
+.transition-container.slide .transition1 {
+  position: fixed;
+  background-color: #00efff;
+  -webkit-animation: slide 0.3s ease-in-out forwards;
+          animation: slide 0.3s ease-in-out forwards;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  right: -100vw;
+}
+
+.transition-container.slide .transition2 {
+  position: fixed;
+  background-color: orange;
+  -webkit-animation: slide 0.3s ease-in-out forwards;
+          animation: slide 0.3s ease-in-out forwards;
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  right: -100vw;
+}
+
+.transition-container.slide .transition3 {
+  position: fixed;
+  background-color: green;
+  -webkit-animation: slide 0.3s ease-in-out forwards;
+          animation: slide 0.3s ease-in-out forwards;
+  -webkit-animation-delay: 0.6s;
+          animation-delay: 0.6s;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  right: -100vw;
+}
+
+@-webkit-keyframes slide {
+  0% {
+    right: -100vw;
+  }
+  100% {
+    right: 0vw;
+  }
+}
+
+@keyframes slide {
+  0% {
+    right: -100vw;
+  }
+  100% {
+    right: 0vw;
+  }
+}
 /*# sourceMappingURL=style.css.map *//*# sourceMappingURL=style.css.map */

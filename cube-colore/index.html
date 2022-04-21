@@ -8,21 +8,16 @@
     <title>Document</title>
 </head>
 <body>
+
+    <div class="transition-container">
+        <div class="transition1 transition" style="--i:0"></div>
+        <div class="transition2 transition " style="--i:1"></div>
+        <div class="transition3 transition" style="--i:2"></div>
+    </div>
     <a href="../index.html" class="link return">
         <ion-icon name="arrow-back-outline"></ion-icon>
     </a>
     <div class="wrapper">
-        <div class="container1">
-            <div class="cube">
-                <div class="top"></div>
-                <div>
-                    <span style="--i:0"></span>
-                    <span style="--i:1"></span>
-                    <span style="--i:2"></span>
-                    <span style="--i:3"></span>
-                </div>
-            </div>
-        </div>
 
 
         <div class="container2">
@@ -37,18 +32,6 @@
             </div>
         </div>
 
-
-        <div class="container3">
-            <div class="cube">
-                <div class="top"></div>
-                <div>
-                    <span style="--i:0"></span>
-                    <span style="--i:1"></span>
-                    <span style="--i:2"></span>
-                    <span style="--i:3"></span>
-                </div>
-            </div>
-        </div>
 
 
         <div class="container4">
@@ -65,6 +48,19 @@
         
     </div>
 </body>
+<script>
+    const link=document.querySelector("a.link")
+    const transition = document.querySelector(".transition-container") ;
+    link.addEventListener("click", (e) =>{
+        e.preventDefault();
+        transition.classList.add("slide")
+        setTimeout(()=> {
+            window.location = link.href;
+        },900)
+    })
+
+
+</script>
 <script src="index.js"></script>
 <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
 </html>

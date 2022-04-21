@@ -173,7 +173,6 @@ body{
     
 }
 .return{
-    background: black;
     width: 7vw;
     height: 7vh;
     position: absolute;
@@ -181,15 +180,16 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    top: 0;
+    top: 3%;
     left: 0;
+    font-size: 4em;
     ion-icon{
       color: white;
       transition: 0.5s;
       animation: animate 0.5s infinite linear;
     }
     ion-icon:hover{
-      color: #2196F3;
+      color: orange;
     }
     @keyframes animate {
       0%{
@@ -200,3 +200,49 @@ body{
       }
     }
   }
+
+.transition-container{
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    right: -100vw;
+    z-index: 1000;
+}
+.transition-container.slide .transition1{
+    position: fixed;
+    background-color: #00efff;
+    animation: slide 0.3s ease-in-out forwards;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    right: -100vw;
+}
+.transition-container.slide .transition2{
+    position: fixed;
+    background-color: orange;
+    animation: slide 0.3s ease-in-out forwards;
+    animation-delay: 0.3s;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    right: -100vw;
+}
+.transition-container.slide .transition3{
+    position: fixed;
+    background-color: green;
+    animation: slide 0.3s ease-in-out forwards;
+    animation-delay: 0.6s;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    right: -100vw;
+}
+@keyframes slide {
+    0%{
+        right: -100vw;
+    }
+    100%{
+        right: 0vw;
+    }
+}

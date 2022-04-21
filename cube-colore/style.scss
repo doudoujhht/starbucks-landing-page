@@ -7,12 +7,21 @@
 
 :root{
     --dimension:300px;
+    --dimension2:200px;
+}
+body, html{
+    overflow-y: hidden;
+}
+.container2{
+    display: flex;
+    justify-content: center;
 }
 
 .wrapper {
     display: flex;
     width: 100%;
     min-height: 100vh;
+    justify-content: center;
 
 }
 .container1, .container2, .container3, .container4  { 
@@ -34,6 +43,10 @@ body{
     transform-style: preserve-3d;
     transform: rotateX(-30deg);
     animation: animer 4s infinite linear;
+}
+.container2 .cube{
+    width: var(--dimension2);
+    height: var(--dimension2);
 }
 .container2 .cube{
     
@@ -76,12 +89,12 @@ body{
     translateZ(calc(var(--dimension) / 2));
 
 }
-
+.container2 .cube div span{
+    transform: rotateY(calc(90deg * var(--i))) 
+    translateZ(calc(var(--dimension2) / 2));
+}
 .container2 .cube div span{
     background: linear-gradient(#151515, #ec0000);
-}
-.container3 .cube div span{
-    background: linear-gradient(#151515, #ecec00);
 }
 
 .container4 .cube div span{
@@ -96,6 +109,12 @@ body{
     height: var(--dimension);
     background: #222;
     transform: rotateX(90deg) translateZ(calc(var(--dimension) / 2));
+}
+.container2 .cube .top{
+    width: var(--dimension2);
+    height: var(--dimension2);
+    transform: rotateX(90deg) translateZ(calc(var(--dimension2) / 2));
+
 }
 
 .top::before{
@@ -114,7 +133,14 @@ body{
     0 0 300px rgba(0,255,0,0.6),
     0 0 400px rgba(0,255,0,0.8),
     0 0 500px rgba(0,255,0,1);
+
 }
+.container2 .cube .top::before{
+    width: var(--dimension2);
+    height: var(--dimension2);
+}
+
+
 
 .container2 .top::before{
     background: #f00;
@@ -124,6 +150,7 @@ body{
     0 0 300px rgba(255,0,0,0.6),
     0 0 400px rgba(255,0,0,0.8),
     0 0 500px rgba(255,0,0,1);
+
 }
 .container3 .top::before{
     background: #ff0;
@@ -155,7 +182,6 @@ body{
 }
 
 .return{
-    background: black;
     width: 7vw;
     height: 7vh;
     position: absolute;
@@ -163,15 +189,16 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    top: 0;
+    top: 3%;
     left: 0;
+    font-size: 4em;
     ion-icon{
       color: white;
       transition: 0.5s;
       animation: animate 0.5s infinite linear;
     }
     ion-icon:hover{
-      color: #2196F3;
+      color: orange;
     }
     @keyframes animate {
       0%{
@@ -182,3 +209,49 @@ body{
       }
     }
   }
+
+  .transition-container{
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    right: -100vw;
+    z-index: 1000;
+}
+.transition-container.slide .transition1{
+    position: fixed;
+    background-color: #00efff;
+    animation: slide 0.3s ease-in-out forwards;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    right: -100vw;
+}
+.transition-container.slide .transition2{
+    position: fixed;
+    background-color: orange;
+    animation: slide 0.3s ease-in-out forwards;
+    animation-delay: 0.3s;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    right: -100vw;
+}
+.transition-container.slide .transition3{
+    position: fixed;
+    background-color: green;
+    animation: slide 0.3s ease-in-out forwards;
+    animation-delay: 0.6s;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    right: -100vw;
+}
+@keyframes slide {
+    0%{
+        right: -100vw;
+    }
+    100%{
+        right: 0vw;
+    }
+}
