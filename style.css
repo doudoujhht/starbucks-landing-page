@@ -1,120 +1,160 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
 }
 
-body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+/* code relatif a la bare de navigation*/
+section {
+  position: relative;
+  width: 100%;
   min-height: 100vh;
-  background: #10131c;
-}
-
-.navigation {
-  position: relative;
-  width: 140px;
-  height: 140px;
-  border-radius: 20px;
-  background: #212532;
+  padding: 100px;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  cursor: pointer;
-  transition: 1.6s;
-  transition-delay: 0.25s;
+  background-color: #fff;
 }
 
-.container-main {
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .logo {
   position: relative;
-  left: -10px;
-  top: 10px;
+  max-width: 80px;
+}
+
+header ul {
+  position: relative;
+  display: flex;
+}
+
+header ul li {
+  list-style: none;
+}
+
+header ul li a {
+  display: inline-block;
+  color: #333;
+  font-weight: 400;
+  margin-left: 40px;
+  text-decoration: none;
+}
+
+/* debut du css de la section du milieu */
+.content {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.content .textbox {
+  position: relative;
+  max-width: 600px;
+}
+
+.content .textBox h2 {
+  color: #333;
+  font-size: 4em;
+  line-height: 1.4em;
+  font-weight: 500;
+}
+
+.content .textBox h2 span {
+  color: #017143;
+  font-size: 1.2em;
+  font-weight: 900;
+}
+
+.content .textBox a {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 8px 20px;
+  background-color: #017143;
+  color: #fff;
+  border-radius: 40px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-decoration: none;
+}
+
+.content .imgBox {
+  width: 600px;
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 50px;
+  margin-top: 50px;
+}
+
+.content .imgBox img {
+  max-width: 340px;
+}
+
+.thumb {
+  position: absolute;
+  left: 50%;
+  bottom: 20px;
+  transform: translateX(-50%);
+  display: flex;
+}
+
+.thumb li {
+  list-style: none;
+  display: inline-block;
+  margin: 0 20px;
+  cursor: pointer;
   transition: 0.5s;
 }
 
-.active .container-main {
-  left: 0;
+.thumb li:hover {
+  transform: translateY(-15px);
+}
+
+.thumb li img {
+  max-width: 60px;
+}
+
+.sci {
+  position: absolute;
+  top: 50%;
+  right: 30px;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.sci li {
+  list-style: none;
+}
+
+.sci li a {
+  display: inline-block;
+  margin: 5px 0;
+  transform: scale(0.6);
+  filter: invert(1);
+}
+
+.circle {
+  position: absolute;
   top: 0;
-  transform: translateX(-60px) translateY(60px);
-  transition: 1.6s;
-}
-
-.navigation.active {
-  width: 600px;
-  height: 600px;
-  transition: 0.25s;
-  transition-delay: 400ms;
-}
-
-.container-main {
+  left: 0;
   width: 100%;
   height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.navigation span {
-  position: absolute;
-  width: 14px;
-  height: 14px;
-  background: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 50%;
-  transform: translate(calc(24px * var(--x)), calc(24px * var(--y)));
-  transition: 0.5s;
-  transition-delay: calc(50ms * var(--i));
-}
-
-.navigation.active span {
-  width: 90px;
-  height: 90px;
-  background: #333849;
-  transform: translate(calc(120px * var(--x)), calc(120px * var(--y)));
-}
-
-.navigation span ion-icon {
-  transition: 0.25s;
-  transition-delay: calc(250ms * var(--i));
-  transition-delay: 0s;
-  font-size: 0em;
-}
-
-.navigation.active span ion-icon {
-  color: white;
-  transition: 0s;
-  font-size: 2.7em;
-  -webkit-animation: ani 1.5s linear;
-          animation: ani 1.5s linear;
-}
-
-.navigation.active span:hover ion-icon {
-  color: #2dfc52;
-  transition: 0s;
-  filter: drop-shadow(0 0 4px #2dfc52) drop-shadow(0 0 10px #2dfc52) drop-shadow(0 0 30px #2dfc52);
-}
-
-@-webkit-keyframes ani {
-  0% {
-    font-size: 0em;
-  }
-  100% {
-    font-size: 2.7em;
-  }
-}
-
-@keyframes ani {
-  0% {
-    font-size: 0em;
-  }
-  100% {
-    font-size: 2.7em;
-  }
-}
-a, a:hover, a :visited {
-  color: white;
-  text-decoration: none;
+  background: #017143;
+  -webkit-clip-path: circle(600px at right 800px);
+          clip-path: circle(600px at right 800px);
 }/*# sourceMappingURL=style.css.map */
